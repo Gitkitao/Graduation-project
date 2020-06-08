@@ -1,0 +1,323 @@
+body {
+    background: white;
+}
+
+
+/*导航部分*/
+
+.nav {
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.05);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.nav.scroll {
+    background: #FFF;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+    transition: 0.3s
+}
+
+.nav .layui-container {
+    width: 1200px;
+    padding: 0;
+    position: relative;
+}
+
+.nav .nav-logo {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    line-height: 80px;
+}
+
+.nav .nav-list {
+    display: inline-block;
+    height: 80px;
+}
+
+.nav .layui-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 578px;
+    padding: 0 5px;
+    color: #000;
+    background: transparent;
+}
+
+.nav .layui-nav .layui-nav-item {
+    display: inline-block;
+    margin: 0 53px;
+    line-height: 80px;
+}
+
+.nav .layui-nav .layui-nav-item .layui-nav-child {
+    /* display: block; */
+    position: absolute;
+    top: 80px;
+    left: -20px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.nav .layui-nav .layui-nav-item .layui-nav-child a {
+    display: block;
+    width: 96px;
+    height: 36px;
+    padding-left: 20px;
+}
+
+.layui-nav .layui-nav-item .layui-nav-more {
+    border-style: solid dashed dashed;
+    border-color: black transparent transparent;
+    position: absolute;
+    top: 40px;
+    right: -15px;
+}
+
+.layui-nav .layui-nav-item .layui-nav-mored {
+    margin-top: -9px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent black
+}
+
+.nav .layui-nav .layui-nav-item a {
+    padding: 0 0;
+    font-size: 18px;
+    color: #000;
+}
+
+.nav .layui-nav-bar,
+.nav .layui-nav .layui-this:after {
+    height: 2px;
+    background-color: #2db5a3;
+}
+
+.nav .layui-nav .layui-this a,
+.nav .layui-nav .layui-nav-item a:hover {
+    color: #2db5a3;
+}
+
+
+/*轮播*/
+
+#banner img {
+    width: 100%;
+    height: 898px;
+}
+
+#banner .panel {
+    width: 400px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -200px;
+    text-align: center;
+}
+
+#banner .panel p {
+    color: #ffffff;
+    font-size: 44px;
+    line-height: 80px;
+    letter-spacing: 15px;
+}
+
+#banner .panel p.title {
+    color: #ffffff;
+    font-size: 54px;
+    letter-spacing: 10px;
+}
+
+
+/*主体—产品*/
+
+.main-product {
+    padding-top: 90px;
+    padding-bottom: 130px;
+}
+
+.main-product .title,
+.main-service .title {
+    color: #484848;
+    font-size: 24px;
+    text-align: center;
+    line-height: 160px;
+}
+
+.main-product .title span,
+.main-service .title span {
+    color: #2db5a3;
+}
+
+.main-product p {
+    font-size: 16px;
+    color: #ababab;
+    line-height: 28px;
+}
+
+.main-product .content {
+    border: 1px solid #DEDEDE;
+    padding: 30px 36px 0 36px;
+    text-align: center;
+    /* transition: 0.3s; */
+}
+
+.main-product .content .label {
+    font-size: 18px;
+    color: #939393;
+    line-height: 46px;
+    padding-top: 6px;
+}
+
+.main-product .content a {
+    font-size: 18px;
+    color: #a1d8cb;
+    line-height: 68px;
+}
+
+.main-product .content a:hover {
+    color: #2db5a3;
+}
+
+.main-product .content:hover {
+    box-shadow: 0 0 3px 3px #EEE;
+    transition: 0.3s;
+}
+
+.main-product .content img {
+    transition: 2s;
+}
+
+.main-product .content img:hover {
+    transform: rotateY(360deg);
+}
+
+
+/*主体-服务*/
+
+.main-service {
+    background: #f8f8f8;
+}
+
+.main-service .content {
+    position: relative;
+}
+
+.main-service .content .content-left {
+    width: 50%;
+}
+
+.main-service .content .content-left img {
+    width: 100%;
+}
+
+.main-service .content .content-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    background: #FFF;
+    padding: 58px 40px 0 48px;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main-service .content .content-right p {
+    color: #adadad;
+    line-height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main-service .content .content-right p.label {
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+.main-service .content .content-right span {
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #2cb6a1;
+    margin-bottom: 23px;
+}
+
+.main-service .content .content-right:hover {
+    box-shadow: 0 0 3px 3px #EEE;
+}
+
+.main-service .layui-flow-more {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.main-service .layui-flow-more a {
+    border-radius: 3px;
+}
+
+.main-service .layui-flow-more a cite {
+    padding: 0 62px;
+    font-size: 23px;
+    line-height: 46px;
+    color: #FFF;
+    background: #7fd3c6;
+}
+
+
+/*底部*/
+
+.footer {
+    padding-bottom: 70px;
+    background: #5e6664;
+}
+
+.footer .footer-web {
+    padding-top: 50px;
+    padding-bottom: 63px;
+}
+
+.footer .footer-web a {
+    color: #a5aaa9;
+    line-height: 22px;
+    margin-right: 20px;
+}
+
+.footer .footer-web a:hover {
+    color: #dce1e0;
+}
+
+.footer .footer-contact {
+    color: #fff;
+}
+
+.footer .footer-contact img {
+    width: 86px;
+    height: 86px;
+}
+
+.footer .footer-contact a {
+    color: #a5aaa9;
+}
+
+.footer .footer-contact .contact-top {
+    padding-top: 20px;
+    line-height: 30px;
+}
+
+.footer .footer-contact .contact-top label {
+    display: inline-block;
+    padding: 0 5px;
+    color: #a5aaa9;
+}
+
+.footer .footer-contact .contact-bottom {
+    line-height: 35px;
+}

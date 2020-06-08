@@ -1,0 +1,56 @@
+{{extend './common/layout.art'}}
+
+{{block 'title'}}<title>古月公司-案例</title>{{/block}}
+{{block 'link'}}<link rel="stylesheet" href="/static/css/case.css">{{/block}}
+{{block 'main'}}
+    <!-- nav部分 -->
+    {{include './common/header.art'}}
+    <!-- banner部分 -->
+    <div class="banner case">
+        <div class="title">
+            <p>成功案例</p>
+            <p class="en">Successful Case</p>
+        </div>
+    </div>
+    <!-- main部分 -->
+    <div class="main-case">
+        <div class="layui-container"> 
+            <div class="layui-row">
+            {{each result.records value i}}
+                <div class="layui-inline content {{i%3 == 1 ? 'even center':''}}">
+                    <a href="case/detail">
+                        <div class="layui-inline case-img"><img src={{value.cover}}></div>
+                        <p class="lable">{{value.title}}</p>
+                        <p>{{value.content}}</p>
+                    </a>
+                </div>
+            {{/each}}  
+            </div>
+            <div id="casePage"></div>
+        </div>
+    </div>
+    {{include './common/footer.art'}}
+{{/block}}
+<div id="casePage"></div>
+{{block 'script'}}
+    <script>
+        layui.use('laypage', function(){
+            var laypage = layui.laypage;
+            laypage.render({
+                elem: 'casePage' ,
+                count: {{count}},
+                limit: 9,
+                theme: '#2db5a3',
+                skip: true,
+                curr: {{curr}},
+                layout: ['prev', 'page', 'next'],
+                jump: function(obj, first){
+                    if(!first){
+                        var pageNum = obj.curr;
+                        location.href='?pageNum='+pageNum;
+                    }
+                }     
+            })
+        })
+    </script>
+{{/block}}

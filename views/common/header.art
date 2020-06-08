@@ -1,0 +1,20 @@
+<!-- nav部分 -->
+    <div class="nav">
+        <div class="layui-container">
+            <!-- 公司logo -->
+            <div class="nav-logo">
+                <a href="index">
+                    <img src="/static/images/logo.png" alt="网络公司">
+                </a>
+            </div>
+            <!-- 导航条 -->
+            <div class="nav-list">
+                <ul class="layui-nav" lay-filter="">
+                    <li class="layui-nav-item {{currentLink == 'product' ? 'layui-this':''}}"><a href="product">产品</a></li>
+                    <li class="layui-nav-item {{currentLink == 'news' ? 'layui-this':''}}"><a href="news">动态</a></li>
+                    <li class="layui-nav-item {{currentLink == 'case' ? 'layui-this':''}}"><a href="case">案例</a></li>
+                    <li class="layui-nav-item {{currentLink == 'about' ? 'layui-this':''}}"><a href="about">关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>

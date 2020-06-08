@@ -1,0 +1,64 @@
+{{extend './common/layout.art'}}
+
+{{block 'title'}}<title>古月公司-产品</title>{{/block}}
+{{block 'link'}}<link rel="stylesheet" href="/static/css/product.css">{{/block}}
+{{block 'main'}}
+    <!-- nav部分 -->
+    {{include './common/header.art'}}
+    <!-- 侧导航栏 -->
+    <div class="nav-lists">
+        <dl class="child">
+            <dd><a href="#">回到顶部</a></dd>
+            <dd><a href="#index1">JS</a></dd>
+            <dd><a href="#index2">CSS</a></dd>
+            <dd><a href="#index3">兼容</a></dd>
+            <dd><a href="#index4">响应式</a></dd>
+        </dl>
+    </div>
+    <!-- banner -->
+    <div class="banner product">
+        <div class="title">
+            <p>产品展示</p>
+            <p class="en">Product Display</p>
+        </div>
+    </div>
+    <!-- main部分 -->
+    <div class="main product">
+        <div class="layui-container">
+            <div class="content layui-row" id='index1'>
+                <div class="layui-col-lg6 content-img"><img src="/static/images/Product_img1.jpg"></div>
+                <div class="layui-col-lg6 right">
+                    <p class="label">JS基础库</p>
+                    <p class="detail">从小屏逐步扩展到大屏，最终实现所有屏幕适配，最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。</p>
+                    <div><a href="javascript:;">查看产品 ></a></div>
+                </div>
+            </div>
+            <div class="content layui-row" id='index2'>
+                <div class="layui-col-lg6 content-img"><img src="/static/images/Product_img2.jpg"></div>
+                <div class="layui-col-lg6 right">
+                    <p class="label">CSS处理</p>
+                    <p class="detail">从小屏逐步扩展到大屏，最终实现所有屏幕适配，最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。</p>
+                    <div><a href="javascript:;">查看产品 ></a></div>
+                </div>
+            </div>
+            <div class="content layui-row" id='index3'>
+                <div class="layui-col-lg6 content-img"><img src="/static/images/Product_img3.jpg"></div>
+                <div class="layui-col-lg6 right">
+                    <p class="label">兼容性</p>
+                    <p class="detail">从小屏逐步扩展到大屏，最终实现所有屏幕适配，最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。</p>
+                    <div><a href="javascript:;">查看产品 ></a></div>
+                </div>
+            </div>
+            <div class="content layui-row" id='index4'>
+                <div class="layui-col-lg6 content-img"><img src="/static/images/Product_img4.jpg"></div>
+                <div class="layui-col-lg6 right">
+                    <p class="label">响应式</p>
+                    <p class="detail">从小屏逐步扩展到大屏，最终实现所有屏幕适配，最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。</p>
+                    <div><a href="javascript:;">查看产品 ></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer部分-->
+    {{include './common/footer.art'}}
+{{/block}}

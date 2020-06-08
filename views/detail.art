@@ -1,0 +1,40 @@
+{{extend './common/layout.art'}}
+
+{{block 'title'}}<title>古月公司-详情页</title>{{/block}}
+{{block 'link'}}<link rel="stylesheet" href="/static/css/detail.css">{{/block}}
+{{block 'main'}}
+    <!-- nav部分 -->
+    <!-- nav部分 -->
+    <div class="nav">
+        <div class="layui-container">
+            <!-- 公司logo -->
+            <div class="nav-logo">
+                <a href="index">
+                    <img src="/static/images/logo.png" alt="网络公司">
+                </a>
+            </div>
+            <!-- 导航条 -->
+            <div class="nav-list">
+                <ul class="layui-nav" lay-filter="">
+                    <li class="layui-nav-item {{currentLink == 'product' ? 'layui-this':''}}"><a href="../product">产品</a></li>
+                    <li class="layui-nav-item {{currentLink == 'news' ? 'layui-this':''}}"><a href="../news">动态</a></li>
+                    <li class="layui-nav-item {{currentLink == 'case' ? 'layui-this':''}}"><a href="../case">案例</a></li>
+                    <li class="layui-nav-item {{currentLink == 'about' ? 'layui-this':''}}"><a href="../about">关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- main部分 -->
+    <div class="main-newsdate">
+        <div class="layui-container">
+            <p class="news"><a href="../news">动态详情</a> >详情</p>
+            <h1>javascript和LAYUI的秘密</h1>
+            <p class="pushtime">发布时间：<span>2020-03-02</span></p>
+            <p class="introTop">从小屏逐步扩展到大屏，最终实现所有屏幕适配，最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。</p>
+            <div><img src="/static/images/news_big.jpg" alt="详情图"></div>
+            <p class="introBott">从小屏逐步扩展到大屏，最终实现所有屏幕适配，最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。最终实现所有屏幕适配，适应移动互联潮流。</p>
+        </div>
+    </div>
+    <!--footer部分-->
+    {{include './common/footer.art'}}
+{{/block}}

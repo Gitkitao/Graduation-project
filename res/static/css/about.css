@@ -1,0 +1,352 @@
+body {
+    background: #f5f6f7;
+}
+
+
+/*导航部分*/
+
+.nav {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.nav .layui-container {
+    width: 1200px;
+    padding: 0;
+    position: relative;
+}
+
+.nav .nav-logo {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    line-height: 80px;
+}
+
+.nav .nav-list {
+    display: inline-block;
+    height: 80px;
+}
+
+.nav .layui-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 578px;
+    padding: 0 5px;
+    color: #000;
+    background: transparent;
+}
+
+.nav .layui-nav .layui-nav-item {
+    display: inline-block;
+    margin: 0 53px;
+    line-height: 80px;
+}
+
+.nav .layui-nav .layui-nav-item a {
+    padding: 0 0;
+    font-size: 18px;
+    color: #000;
+}
+
+.nav .layui-nav-bar,
+.nav .layui-nav .layui-this:after {
+    height: 2px;
+    background-color: #2db5a3;
+}
+
+.nav .layui-nav .layui-this a,
+.nav .layui-nav .layui-nav-item a:hover {
+    color: #2db5a3;
+}
+
+
+/* banner部分 */
+
+.banner {
+    height: 320px;
+    margin-top: 80px;
+}
+
+.about {
+    background: url(../images/nav_img4.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.banner .title.active {
+    padding-top: 120px;
+    transition: 1.5s;
+}
+
+.banner .title p {
+    color: #606060;
+    font-size: 36px;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 5px;
+}
+
+.banner .title p.en {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+
+/** 关于 */
+
+.banner.about {
+    background: url(../images/4.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.main-about {
+    padding-bottom: 130px;
+}
+
+.main-about ul.aboutab {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.main-about ul.aboutab li {
+    display: inline-block;
+    padding: 0 32px;
+    margin-left: 30px;
+    font-size: 24px;
+    line-height: 50px;
+    color: #b5b5b5;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.main-about ul.aboutab li:first-child {
+    margin-left: 0;
+}
+
+.main-about ul.aboutab li.layui-this,
+.main-about ul.aboutab li:hover {
+    color: #2ab5a3;
+    border-color: #afddd7;
+    transition: 0.3s;
+}
+
+.main-about .tabJob,
+.main-about .tabCour {
+    display: none;
+}
+
+.main-about .tabIntro .content p {
+    padding: 0 50px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+
+/*公司简介*/
+
+.main-about .layui-container {
+    width: 1200px;
+    padding: 0;
+}
+
+.main-about .tabIntro {
+    padding-bottom: 15px;
+}
+
+.main-about .tabIntro .content {
+    vertical-align: middle;
+}
+
+.main-about .tabIntro .content .img {
+    width: 50%;
+}
+
+.main-about .tabIntro .content .img img {
+    width: 100%;
+}
+
+.main-about .tabIntro .content .panel {
+    padding-top: 20%;
+    width: 50%;
+    float: right;
+}
+
+.main-about .tabIntro .content .p_block {
+    float: left;
+}
+
+.main-about .tabIntro .p_hidden {
+    padding: 0 20px;
+    display: none;
+}
+
+
+/*招贤纳士*/
+
+.main-about .tabJob .content {
+    padding: 0 0 40px 20px;
+    border: 1px solid #e2e2e2;
+    border-top: 4px solid #65d0c5;
+    margin-top: 90px;
+}
+
+.main-about .tabJob .content:first-child {
+    margin-top: 10px;
+}
+
+.main-about .tabJob .content p {
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.main-about .tabJob .content p.title {
+    font-size: 30px;
+    line-height: 90px;
+    color: #545454;
+}
+
+.main-about .tabJob .content ol {
+    padding-left: 20px;
+    list-style-type: none;
+    counter-reset: sectioncounter;
+}
+
+.main-about .tabJob .content ol li {
+    color: #8d8d8d;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.main-about .tabJob .content ol li:before {
+    content: counter(sectioncounter) "、";
+    counter-increment: sectioncounter;
+}
+
+
+/*发展历程*/
+
+.main-about .tabCour p.title {
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.main-about .tabCour .timeline {
+    position: relative;
+    margin-top: 75px;
+}
+
+.main-about .tabCour .timeline:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: "";
+    width: 2px;
+    background-color: #e2e2e2;
+    left: 50%;
+}
+
+.main-about .tabCour .timeline li {
+    position: relative;
+    height: 195px;
+    padding-top: 95px;
+}
+
+.main-about .tabCour .timeline li:first-child {
+    padding-top: 0;
+}
+
+.main-about .tabCour .timeline li .cour-img {
+    position: absolute;
+    left: 50%;
+    margin-left: -97.5px;
+    width: 195px;
+    border-radius: 50%;
+}
+
+.main-about .tabCour .timeline li .cour-img img {
+    width: 100%;
+}
+
+.main-about .tabCour .timeline li .cour-panel {
+    padding-top: 55px;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.main-about .tabCour .timeline li.odd .cour-panel {
+    padding-top: 55px;
+    padding-right: 50px;
+    text-align: right;
+}
+
+.main-about .tabCour .timeline li .cour-panel p.label {
+    font-size: 18px;
+    color: #000;
+}
+
+.main-about .tabCour .timeline li .cour-panel p {
+    color: #949494;
+    line-height: 30px;
+}
+
+
+/* 底部 */
+
+.footer {
+    padding-bottom: 70px;
+    background: #5e6664;
+}
+
+.footer .footer-web {
+    padding-top: 50px;
+    padding-bottom: 63px;
+}
+
+.footer .footer-web a {
+    color: #a5aaa9;
+    line-height: 22px;
+    margin-right: 20px;
+}
+
+.footer .footer-web a:hover {
+    color: #dce1e0;
+}
+
+.footer .footer-contact {
+    color: #fff;
+}
+
+.footer .footer-contact img {
+    width: 86px;
+    height: 86px;
+}
+
+.footer .footer-contact a {
+    color: #a5aaa9;
+}
+
+.footer .footer-contact .contact-top {
+    padding-top: 20px;
+    line-height: 30px;
+}
+
+.footer .footer-contact .contact-top label {
+    display: inline-block;
+    padding: 0 5px;
+    color: #a5aaa9;
+}
+
+.footer .footer-contact .contact-bottom {
+    line-height: 35px;
+}

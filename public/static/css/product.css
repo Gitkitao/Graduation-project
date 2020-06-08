@@ -1,0 +1,227 @@
+body {
+    background: #f5f6f7;
+}
+
+
+/*导航部分*/
+
+.nav {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.nav .layui-container {
+    width: 1200px;
+    padding: 0;
+    position: relative;
+}
+
+.nav .nav-logo {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    line-height: 80px;
+}
+
+.nav .nav-list {
+    display: inline-block;
+    height: 80px;
+}
+
+.nav .layui-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 578px;
+    padding: 0 5px;
+    color: #000;
+    background: transparent;
+}
+
+.nav .layui-nav .layui-nav-item {
+    display: inline-block;
+    margin: 0 53px;
+    line-height: 80px;
+}
+
+.nav-lists {
+    position: relative;
+}
+
+.nav-lists .child {
+    position: fixed;
+    top: 65%;
+    right: 20px;
+    width: 96px;
+    height: 180px;
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.nav-lists .child a {
+    display: block;
+    width: 96px;
+    height: 35px;
+    border-bottom: 1px solid darkgray;
+    text-align: center;
+    line-height: 36px;
+}
+
+.nav-lists .child a:hover {
+    color: black;
+    background-color: darkgrey;
+}
+
+.nav .layui-nav .layui-nav-item a {
+    padding: 0 0;
+    font-size: 18px;
+    color: #000;
+}
+
+.nav .layui-nav-bar,
+.nav .layui-nav .layui-this:after {
+    height: 2px;
+    background-color: #2db5a3;
+}
+
+.nav .layui-nav .layui-this a,
+.nav .layui-nav .layui-nav-item a:hover {
+    color: #2db5a3;
+}
+
+
+/* banner部分 */
+
+.banner {
+    height: 320px;
+    margin-top: 80px;
+}
+
+.banner.product {
+    background: url(../images/1.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.banner .title.active {
+    padding-top: 120px;
+    transition: 1.5s;
+}
+
+.banner .title p {
+    color: #606060;
+    font-size: 36px;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 5px;
+}
+
+.banner .title p.en {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+
+/* 产品部分 */
+
+.main.product {
+    padding: 30px 0 75px 0;
+}
+
+.main.product .content {
+    padding: 50px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.main.product .content .content-img {
+    text-align: center;
+}
+
+.main.product .content .content-img img {
+    max-width: 100%;
+}
+
+.main.product .content .label {
+    color: #565656;
+    font-size: 30px;
+    line-height: 78px;
+    margin-top: 32px;
+}
+
+.main.product .content .detail {
+    font-size: 16px;
+    line-height: 28px;
+    color: #afafaf;
+    padding-bottom: 30px;
+}
+
+.main.product .content a {
+    color: #a0d2cc;
+    font-size: 16px;
+    line-height: 38px;
+    padding: 10px 11px 10px 23px;
+    border: 1px solid #a0d2cc;
+    border-radius: 3px;
+}
+
+.main.product .content a:hover {
+    color: #55c9bb;
+}
+
+
+/*底部*/
+
+.footer {
+    padding-bottom: 70px;
+    background: #5e6664;
+}
+
+.footer .footer-web {
+    padding-top: 50px;
+    padding-bottom: 63px;
+}
+
+.footer .footer-web a {
+    color: #a5aaa9;
+    line-height: 22px;
+    margin-right: 20px;
+}
+
+.footer .footer-web a:hover {
+    color: #dce1e0;
+}
+
+.footer .footer-contact {
+    color: #fff;
+}
+
+.footer .footer-contact img {
+    width: 86px;
+    height: 86px;
+}
+
+.footer .footer-contact a {
+    color: #a5aaa9;
+}
+
+.footer .footer-contact .contact-top {
+    padding-top: 20px;
+    line-height: 30px;
+}
+
+.footer .footer-contact .contact-top label {
+    display: inline-block;
+    padding: 0 5px;
+    color: #a5aaa9;
+}
+
+.footer .footer-contact .contact-bottom {
+    line-height: 35px;
+}

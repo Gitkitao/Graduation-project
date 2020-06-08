@@ -1,0 +1,60 @@
+{{extend './common/layout.art'}}
+
+{{block 'title'}}<title>古月公司-动态</title>{{/block}}
+{{block 'link'}}<link rel="stylesheet" href="/static/css/news.css">{{/block}}
+{{block 'main'}}
+    <!-- nav部分 -->
+    {{include './common/header.art'}}
+    <!-- banner部分 -->
+    <div class="banner news">
+        <div class="title">
+            <p>实时新闻</p>
+            <p class="en">Real-time News</p>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="main-news">
+        <div class="layui-container">
+            <div class="layui-row layui-col-space20">
+            {{each result.records}}
+                <div class="layui-col-lg6 content"> 
+                    <div>
+                        <div class="news-img">
+                            <a href="case/detail"><img src={{$value.cover}}></a>
+                        </div>
+                        <div class="news-panel">
+                            <strong><a href="case/detail">{{$value.title}}</a></strong>
+                            <p class="detail"><span>{{$value.content}}</span><a href="case/detail">[详细]</a></p>
+                            <p class="read-push">阅读 <span>{{$value.reading}}</span>&nbsp;&nbsp;&nbsp;&nbsp;发布时间：<span>{{$value.publishDate}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+            </div>
+            <div id="newsPage"></div>
+        </div>
+    </div>
+    {{include './common/footer.art'}}
+{{/block}}
+{{block 'script'}}
+    <script>
+        layui.use('laypage', function(){
+            var laypage = layui.laypage;
+            laypage.render({
+                elem: 'newsPage' ,
+                count: {{count}},
+                limit: 16,
+                theme: '#2db5a3',
+                skip: true,
+                curr: {{curr}},
+                layout: ['prev', 'page', 'next'],
+                jump: function(obj, first){
+                    if(!first){
+                        var pageNum = obj.curr;
+                        location.href='?pageNum='+pageNum;
+                    }
+                }     
+            });
+        });
+    </script>
+{{/block}}

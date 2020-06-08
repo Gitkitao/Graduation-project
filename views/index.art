@@ -1,0 +1,167 @@
+{{extend './common/layout.art'}}
+
+{{block 'title'}}<title>古月公司首页</title>{{/block}}
+{{block 'link'}}<link rel="stylesheet" href="/static/css/index.css">{{/block}}
+{{block 'main'}}
+    <!-- nav部分 -->
+    <div class="nav index">
+        <div class="layui-container">
+            <!-- 公司logo -->
+            <div class="nav-logo">
+                <a href="index">
+                    <img src="/static/images/logo.png" alt="网络公司">
+                </a>
+            </div>
+            <!-- 导航条 -->
+            <div class="nav-list">
+                <ul class="layui-nav" lay-filter="">
+                    <li class="layui-nav-item">
+                        <a href="product">产品</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="product#index1">JS</a></dd>
+                            <dd><a href="product#index2">CSS</a></dd>
+                            <dd><a href="product#index3">兼容</a></dd>
+                            <dd><a href="product#index4">响应式</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="news">动态</a></li>
+                    <li class="layui-nav-item"><a href="case">案例</a></li>
+                    <li class="layui-nav-item"><a href="about">关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- banner部分 -->
+    <div>
+        <div class="layui-carousel" id="banner">
+            <div carousel-item>
+                <div>
+                    <img src="/static/images/banner1.jpg">
+                    <div class="panel">
+                        <p class="title">古月公司</p>
+                        <p>B16231</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="/static/images/banner2.jpg">
+                    <div class="panel">
+                        <p class="title">古月公司</p>
+                        <p>B16231</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="/static/images/banner3.jpg">
+                    <div class="panel">
+                        <p class="title">古月公司</p>
+                        <p>B16231</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="/static/images/banner4.jpg">
+                    <div class="panel">
+                        <p class="title">古月公司</p>
+                        <p>B16231</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main部分 -->
+    <div class="main-product">
+        <div class="layui-container">
+            <p class="title">专为前端而研制的<span>核心产品</span></p>
+            <div class="layui-row layui-col-space25">
+                <div class="layui-col-lg3">
+                    <div class="content">
+                        <div><img src="/static/images/Big_icon1.png"></div>
+                        <div>
+                            <p class="label">JS基础库</p>
+                            <p>从小屏逐步扩展到大屏，最终实现所有屏幕适配，适应移动互联潮流。</p>
+                        </div>
+                        <a href="product#index1">查看产品 ></a>
+                    </div>
+                </div>
+                <div class="layui-col-lg3">
+                    <div class="content">
+                        <div><img src="/static/images/Big_icon2.png"></div>
+                        <div>
+                            <p class="label">CSS处理</p>
+                            <p>从小屏逐步扩展到大屏，最终实现所有屏幕适配，适应移动互联潮流。</p>
+                        </div>
+                        <a href="product#index2">查看产品 ></a>
+                    </div>
+                </div>
+                <div class="layui-col-lg3 ">
+                    <div class="content">
+                        <div><img src="/static/images/Big_icon3.png"></div>
+                        <div>
+                            <p class="label">兼容性</p>
+                            <p>从小屏逐步扩展到大屏，最终实现所有屏幕适配，适应移动互联潮流。</p>
+                        </div>
+                        <a href="product#index3">查看产品 ></a>
+                    </div>
+                </div>
+                <div class="layui-col-lg3 ">
+                    <div class="content">
+                        <div><img src="/static/images/Big_icon4.png"></div>
+                        <div>
+                            <p class="label">响应式</p>
+                            <p>从小屏逐步扩展到大屏，最终实现所有屏幕适配，适应移动互联潮流。</p>
+                        </div>
+                        <a href="product#index4">查看产品 ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-service">
+        <div class="layui-container">
+            <p class="title">为客户打造完美的<span>专业服务</span></p>
+            <div class="layui-row layui-col-space25" id="main-ser">
+                {{each result.records}}
+                    <div class="layui-col-lg6">
+                    <div class="content">
+                        <div class="content-left"><img src={{$value.cover}}></div>
+                        <div class="content-right">
+                            <p class="label">{{$value.title}}</p>
+                            <span></span>
+                            <p>{{$value.content}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <!-- footer部分 -->
+    {{include './common/footer.art'}}
+{{/block}}
+{{block 'script'}}
+    <script>
+        layui.use('flow', function() {
+            var flow = layui.flow;
+            flow.load({
+                elem: '#main-ser', //指定列表容器
+                isAuto: false,
+                isLazyimg: true,
+                done: function(page, next) { //到达临界点（默认滚动触发），触发下一页
+                    setTimeout(function() {
+                        var divs = [];
+                        for (var i = 0; i < 4; i++) {
+                            divs.push('<div class="layui-col-lg6"><div class="content"><div class="content-left"><img lay-src="/static/images/home_img1.jpg?v=' + ((page - 1) * 6 + i + 1) + '"><div class="content-right"><p class="label">数据可视化</p><span></span><p>数据可视化，是关于数据视觉表现形式的科学技术研究。其中，这种数据的视觉表现形式被定义为，一种以某种概要形式抽提出来的信息，包括相应信息单位的各种属性和变量。</p></div></div></div></div></div>')
+                        }
+                        next(divs.join(''), page < 4); //假设总页数为 4
+                    }, 500);
+                }
+            });
+        });
+    </script>
+{{/block}}
+// $.get('/index?page='+page, function(res){
+//     layui.each(res.data, function(index, item){
+//         lis.push('<div class="layui-col-lg6"><div class="content"><div class="content-left"><img lay-src="'+item.cover+'?v=' + ((page - 1) * 6 + i + 1) + '"><div class="content-right"><p class="label">'+item.title+'</p><span></span><p>'+item.content+'</p></div></div></div></div></div>');
+//     }); 
+//     //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页 item.id
+//     //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
+//     next(lis.join(''), page < 4);
+// });
